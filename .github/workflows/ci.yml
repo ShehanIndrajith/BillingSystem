@@ -26,7 +26,7 @@ jobs:
 
       - name: Run tests
         run: dotnet test BillingSystem.Test/BillingSystem.Test.csproj --logger trx --results-directory "TestResults"
-      
+
       - name: Upload test results
         uses: actions/upload-artifact@v4
         if: always()
@@ -46,8 +46,8 @@ jobs:
       - name: Build Docker image
         working-directory: ./BillingSystem.Web
         run: |
-          docker build -t ghcr.io/${{ github.repository_owner,, }}/billingsystem:latest .
+          docker build -t ghcr.io/shehanindrajith/billingsystem:latest .
 
       # Push Docker image
       - name: Push Docker image
-        run: docker push ghcr.io/${{ github.repository_owner,, }}/billingsystem:latest
+        run: docker push ghcr.io/shehanindrajith/billingsystem:latest
