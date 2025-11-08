@@ -1,0 +1,19 @@
+version: '3.8'
+services:
+  sql:
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    environment:
+      SA_PASSWORD: "Your_strong_P@ssw0rd"
+      ACCEPT_EULA: "Y"
+    ports:
+      - "1433:1433"
+  web:
+    build:
+      context: .
+      dockerfile: BillingSystem.Web/Dockerfile
+    depends_on:
+      - sql
+    environment:
+      ConnectionStrings__DefaultConnection: "Server=sql;Database=BillingDb;User Id=sa;Password=Your_strong_P@ssw0rd;"
+    ports:
+      - "5000:5000"
