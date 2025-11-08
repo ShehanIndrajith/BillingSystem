@@ -11,9 +11,16 @@
 
   <ItemGroup>
     <PackageReference Include="coverlet.collector" Version="6.0.0" />
+    <PackageReference Include="DevExpress.Win.Design" Version="24.2.5" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
     <PackageReference Include="xunit" Version="2.5.3" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.5.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BillingSystem.Application\BillingSystem.Application.csproj" />
+    <ProjectReference Include="..\BillingSystem.Domain\BillingSystem.Domain.csproj" />
+    <ProjectReference Include="..\BillingSystem.Infrastructure\BillingSystem.Infrastructure.csproj" />
   </ItemGroup>
 
   <ItemGroup>
