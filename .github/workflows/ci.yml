@@ -42,9 +42,12 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
+      # Build Docker image
       - name: Build Docker image
         run: |
-          docker build -t ghcr.io/shehanindrajith/billingsystem:latest -f BillingSystem.Web/Dockerfile .
+          docker build -t ghcr.io/shehanindrajith/billingsystem/billingsystem:latest -f BillingSystem.Web/Dockerfile .
       
+      # Push Docker image
       - name: Push Docker image
-        run: docker push ghcr.io/shehanindrajith/billingsystem:latest
+        run: docker push ghcr.io/shehanindrajith/billingsystem/billingsystem:latest
+
