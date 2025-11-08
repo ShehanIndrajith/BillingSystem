@@ -23,5 +23,5 @@ jobs:
       - name: Build
         run: dotnet build BillingSystem.sln --configuration Release --no-restore
 
-      - name: Test
-        run: dotnet test BillingSystem.Test/BillingSystem.Test.csproj --no-build --verbosity normal
+      - name: Run Tests
+        run: dotnet test BillingSystem.Test/BillingSystem.Test.csproj --verbosity normal
