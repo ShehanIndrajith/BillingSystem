@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: billing-system
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: billing-system
+  template:
+    metadata:
+      labels:
+        app: billing-system
+    spec:
+      containers:
+        - name: billing-system-container
+          image: ghcr.io/shehanindrajith/billingsystem/billingsystem:latest
+          ports:
+            - containerPort: 5000
