@@ -24,6 +24,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "k8s", "k8s", "{02EA681E-C7D
 	ProjectSection(SolutionItems) = preProject
 		k8s-deployment.yml = k8s-deployment.yml
 		k8s-service.yml = k8s-service.yml
+		sql-deployment.yml = sql-deployment.yml
+		sql-secret.yml = sql-secret.yml
+		sql-service.yml = sql-service.yml
 	EndProjectSection
 EndProject
 Global
